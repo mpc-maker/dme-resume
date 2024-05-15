@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vite App</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="/static/lib/vue.global.3.4.24.js"></script>
+    <script async src="/static/lib/index.full.2.7.2.js"></script>
+    <script>
+      loadCss = function(config) {
+        var head = document.getElementsByTagName('head')[0];
+      
+        if (config.content) {
+            var style  = document.createElement('style');
+            style.type = 'text/css';
+            
+            if (style.styleSheet)
+                style.styleSheet.cssText = config.content;
+            else
+                style.innerHTML = config.content;
+      
+            head.appendChild(style);
+        } else if (config.url) {
+            var link  = document.createElement('link');
+            link.href = config.url;
+            link.rel  = 'stylesheet';
+            link.type = 'text/css';
+            head.appendChild(link);
+        }
+      };
+    </script>
+    <script type="module" crossorigin src="/assets/index-DxySR4ki.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-MvNT7ASS.css">
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
